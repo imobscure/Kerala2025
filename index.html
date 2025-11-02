@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kerala Chronicles: Dec 18-30</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Style for the timeline cards for the fade-in effect */
+        .timeline-card {
+            opacity: 0;
+            transform: translateX(-2rem);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        /* Class to add when element is in view */
+        .timeline-card.is-visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        /* Custom timeline line */
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 1.125rem; /* Aligns with the center of the dot (ml-4 + w-10/2 - border/2) -> (1rem + 1.25rem - 0.125rem) = 2.125rem. Simplified: left: 1.125rem; */
+            transform: translateX(-50%);
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: #f1f5f9; /* gray-100 */
+            z-index: 1;
+        }
+        /* Ensure timeline dots are above the line */
+        .timeline-dot {
+            z-index: 2;
+        }
+        .timeline-item {
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-teal-500 to-cyan-600 text-white p-10 text-center shadow-lg">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tight">Kerala Chronicles</h1>
+        <p class="text-xl md:text-2xl font-light mt-2">A 12-Day Adventure: Dec 18th - 30th</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto max-w-4xl p-4 md:p-8">
+
+        <!-- TBD Legend -->
+        <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-700 p-4 rounded-lg shadow mb-8" role="alert">
+            <p class="font-bold">Heads up!</p>
+            <p>Items marked <span class="font-bold">[TBD]</span> are placeholders. You can edit them in the HTML file before deploying!</p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="relative timeline-container">
+
+            <!-- DAY 1: Dec 18 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-indigo-600">Monday, Dec 18</span>
+                    <h2 class="text-2xl font-bold mt-1">The Journey Begins</h2>
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>21:00 - 22:40:</strong> Flight from Pune (PNQ) to Bangalore (BLR).</li>
+                        <li>Long layover at BLR. Time for coffee!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DAY 2: Dec 19 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-teal-600">Tuesday, Dec 19</span>
+                    <h2 class="text-2xl font-bold mt-1">Hello Wayanad!</h2>
+                    <img src="https://images.unsplash.com/photo-1662281208885-15822c6fd794?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Wayanad Tea Gardens" class="w-full h-48 object-cover rounded-lg mt-4 shadow" onerror="this.onerror=null;this.src='https://placehold.co/800x400/22c55e/ffffff?text=Image+Not+Available';">
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>08:50 - 10:05:</strong> Flight from Bangalore (BLR) to Kozhikode (CCJ).</li>
+                        <li>Pick up rental car at the airport.</li>
+                        <li>Drive to Wayanad (approx. 3-4 hours).</li>
+                        <li><strong>~14:00:</strong> Check-in to hotel <span class="font-bold text-amber-600">[Hotel TBD]</span>.</li>
+                        <li>Rest, relax, and local sightseeing.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- DAY 3: Dec 20 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17.25l3 3m0 0l3-3m-3 3v-6m0 6H9m3 0h3m-3-12l3 3m0 0l3-3m-3 3V3.75M9 3.75h3m-3 0h3m-6 9l3 3m0 0l3-3m-3 3v-6m0 6H6m3 0h3m-3-12l3 3m0 0l3-3m-3 3V3.75M6 3.75h3m-3 0h3"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-green-600">Wednesday, Dec 20</span>
+                    <h2 class="text-2xl font-bold mt-1">Exploring Wayanad</h2>
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li>Full-day Wayanad tour using our own car.</li>
+                        <li>Possible spots: Edakkal Caves, Soochipara Falls, Pookode Lake.</li>
+                        <li>Enjoy the scenic drives through the ghats.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DAY 4-5: Dec 21-22 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-sky-600">Thu/Fri, Dec 21-22</span>
+                    <h2 class="text-2xl font-bold mt-1">Back to Kozhikode</h2>
+                    <img src="https://images.unsplash.com/photo-1620758660864-93db6324ffbb?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170" alt="Kozhikode Beach" class="w-full h-48 object-cover rounded-lg mt-4 shadow" onerror="this.onerror=null;this.src='https://placehold.co/800x400/0ea5e9/ffffff?text=Image+Not+Available';">
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>Dec 21 Morning:</strong> Drive from Wayanad to Kozhikode.</li>
+                        <li>Return rental car. (Sheth heads back to Pune).</li>
+                        <li>Check-in to Kozhikode hotel <span class="font-bold text-amber-600">[Hotel TBD]</span>.</li>
+                        <li><strong>Dec 21-22:</strong> Explore Kozhikode.</li>
+                        <li>Visit Kozhikode Beach, Tali Temple, and try the famous Malabar Biriyani!</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DAY 6-7: Dec 23-24 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.5 12a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zm0 0c0 1.657 1.007 3 2.25 3S21 13.657 21 12a9 9 0 10-2.636 6.364M16.5 12V8.25"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-orange-600">Sat/Sun, Dec 23-24</span>
+                    <h2 class="text-2xl font-bold mt-1">Coastal Kannur</h2>
+                    <img src="https://media.istockphoto.com/id/2165620261/photo/a-beautiful-st-angelo-fort-in-kannur.jpg?s=1024x1024&w=is&k=20&c=fOk_aooRNluyn_m-211jsGeCXwuyp5KfST9Cx_x94ak=" alt="Kannur Fort" class="w-full h-48 object-cover rounded-lg mt-4 shadow" onerror="this.onerror=null;this.src='https://placehold.co/800x400/f97316/ffffff?text=Image+Not+Available';">
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>Dec 23 (07:40 - 09:45):</strong> Train to Kannur (YPR KANNUR EXP 16527).</li>
+                        <li>Rent a scooty for 2 days.</li>
+                        <li>Check-in to Kannur hotel <span class="font-bold text-amber-600">[Hotel TBD]</span>.</li>
+                        <li><strong>Dec 23-24:</strong> Explore Kannur.</li>
+                        <li>Visit St. Angelo Fort, Payyambalam Beach, and Muzhappilangad Drive-in Beach.</li>
+                        <li><strong>Dec 24 Evening:</strong> Return scooty.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- DAY 8: Dec 25 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-cyan-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 18.72a9.094 9.094 0 00-12.728 0M12 21l-1.21-1.21a5.25 5.25 0 01-7.424-7.424L12 3l8.634 8.636a5.25 5.25 0 01-7.424 7.424L12 21z"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-cyan-700">Monday, Dec 25</span>
+                    <h2 class="text-2xl font-bold mt-1">Kochi Calling! (Merry Christmas!)</h2>
+                    <img src="https://images.unsplash.com/flagged/photo-1579201661176-1e69dabbb98c?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1974" alt="Kochi" class="w-full h-48 object-cover rounded-lg mt-4 shadow" onerror="this.onerror=null;this.src='https://placehold.co/800x400/0d9488/ffffff?text=Image+Not+Available';">
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>05:10 - 11:03:</strong> Early train to Kochi (CAN ALLP EXP 16308).</li>
+                        <li>Check-in to hotel <span class="font-bold text-amber-600">[Hotel TBD]</span>.</li>
+                        <li><strong>Reunite with friends!</strong></li>
+                        <li>Rest and explore Fort Kochi in the evening.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DAY 9-10: Dec 26-27 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-green-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.25 15.75l-2.5-2.5a3.75 3.75 0 00-5.303 0l-2.5 2.5a3.75 3.75 0 005.303 5.303l2.5-2.5a3.75 3.75 0 000-5.303M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-green-700">Tue/Wed, Dec 26-27</span>
+                    <h2 class="text-2xl font-bold mt-1">Misty Munnar</h2>
+                    <img src="https://plus.unsplash.com/premium_photo-1697730334419-fba83fe143b7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bXVubmFyfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" alt="Munnar" class="w-full h-48 object-cover rounded-lg mt-4 shadow" onerror="this.onerror=null;this.src='https://placehold.co/800x400/16a34a/ffffff?text=Image+Not+Available';">
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>Dec 26 Morning:</strong> Travel from Kochi to Munnar (likely by car/cab, ~4-5 hours).</li>
+                        <li>Check-in and stay in Munnar.</li>
+                        <li><strong>Dec 26-27:</strong> Explore the tea gardens, Top Station, and Mattupetty Dam.</li>
+                        <li>Itinerary in Munnar <span class="font-bold text-amber-600">[TBD]</span>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DAY 11-12: Dec 28-29 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3c2.755 0 5.455.232 8.083.678q.26.042.513.102a11.94 11.94 0 013.273 1.255q.228.14.427.295a11.908 11.908 0 012.33 2.33q.155.199.295.427a11.94 11.94 0 011.255 3.273q.06.253.102.513C21.768 18.545 22 21.245 22 24M12 3C9.245 3 6.545 2.768 3.917 2.322q-.26-.042-.513-.102A11.94 11.94 0 00.13 3.475q-.228-.14-.427-.295A11.908 11.908 0 00.002 5.51q-.155.199-.295.427A11.94 11.94 0 00.962 9.21q-.06.253-.102.513C.232 12.345 0 15.045 0 17.8c0 2.755.232 5.455.678 8.083q.042.26.102.513a11.94 11.94 0 001.255 3.273q.14.228.295.427a11.908 11.908 0 002.33 2.33q.199.155.427.295a11.94 11.94 0 003.273 1.255q.253.06.513.102C9.455 32.768 12.155 33 14.9 33c2.755 0 5.455-.232 8.083-.678q.26-.042.513-.102a11.94 11.94 0 003.273-1.255q.228-.14.427-.295a11.908 11.908 0 002.33-2.33q.155-.199.295-.427a11.94 11.94 0 001.255-3.273q.06-.253.102-.513C32.768 23.455 33 20.755 33 18c0-2.755-.232-5.455-.678-8.083q-.042-.26-.102-.513a11.94 11.94 0 00-1.255-3.273q-.14-.228-.295-.427A11.908 11.908 0 0028.34 3.79q-.199-.155-.427-.295A11.94 11.94 0 0024.64 2.24q-.253-.06-.513-.102C21.455.232 18.755 0 16 0c-2.755 0-5.455.232-8.083.678q-.26.042-.513.102A11.94 11.94 0 004.13 1.935q-.228.14-.427.295A11.908 11.908 0 001.372 4.56q-.155.199-.295.427A11.94 11.94 0 00.022 7.86q.06.253.102.513C.768 11.045 1 13.745 1 16.5c0 2.755-.232 5.455-.678 8.083q-.042.26-.102.513a11.94 11.94 0 00-1.255 3.273q-.14.228-.295.427a11.908 11.908 0 00-2.33 2.33q-.199.155-.427.295A11.94 11.94 0 00.36 31.07q.253.06.513.102C3.545 32.768 6.245 33 9 33c2.755 0 5.455-.232 8.083-.678q.26-.042.513-.102a11.94 11.94 0 003.273-1.255q.228-.14.427-.295a11.908 11.908 0 002.33-2.33q.155-.199.295-.427a11.94 11.94 0 001.255-3.273q.06-.253.102-.513C23.768 23.455 24 20.755 24 18c0-2.755-.232-5.455-.678-8.083q-.042-.26-.102-.513a11.94 11.94 0 00-1.255-3.273q-.14-.228-.295-.427A11.908 11.908 0 0019.44 3.79q-.199-.155-.427-.295A11.94 11.94 0 0016.14 2.24q-.253-.06-.513-.102C13.045.232 10.345 0 7.6 0 4.845 0 2.145.232-.483.678q-.26.042-.513.102A11.94 11.94 0 00-4.27 1.935q-.228.14-.427.295A11.908 11.908 0 00-6.93 4.56q-.155.199-.295.427A11.94 11.94 0 00-8.28 7.86q.06.253.102.513C-8.822 11.045-9 13.745-9 16.5c0 2.755.232 5.455.678 8.083q.042.26.102.513a11.94 11.94 0 001.255 3.273q.14.228.295.427a11.908 11.908 0 002.33 2.33q.199.155.427.295a11.94 11.94 0 003.273 1.255q.253.06.513.102C1.455 32.768 4.155 33 6.9 33c2.755 0 5.455-.232 8.083-.678q.26-.042.513-.102a11.94 11.94 0 003.273-1.255q.228-.14.427-.295a11.908 11.908 0 002.33-2.33q.155-.199.295-.427a11.94 11.94 0 001.255-3.273q.06-.253.102-.513C20.768 23.455 21 20.755 21 18s-.232-5.455-.678-8.083q-.042-.26-.102-.513a11.94 11.94 0 00-1.255-3.273q-.14-.228-.295-.427A11.908 11.908 0 0016.44 3.79q-.199-.155-.427-.295A11.94 11.94 0 0013.14 2.24q-.253-.06-.513-.102C10.045.232 7.345 0 4.6 0 1.845 0-.855.232-3.483.678q-.26.042-.513.102A11.94 11.94 0 00-7.27 1.935q-.228.14-.427.295A11.908 11.908 0 00-9.93 4.56q-.155.199-.295.427A11.94 11.94 0 00-11.28 7.86q.06.253.102.513C-11.822 11.045-12 13.745-12 16.5c0 2.755.232 5.455.678 8.083q.042.26.102.513a11.94 11.94 0 001.255 3.273q.14.228.295.427a11.908 11.908 0 002.33 2.33q.199.155.427.295a11.94 11.94 0 003.273 1.255q.253.06.513.102C-1.455 32.768 1.245 33 4 33c2.755 0 5.455-.232 8.083-.678q.26-.042.513-.102a11.94 11.94 0 003.273-1.255q.228-.14.427-.295a11.908 11.908 0 002.33-2.33q.155-.199.295-.427a11.94 11.94 0 001.255-3.273q.06-.253.102-.513C17.768 23.455 18 20.755 18 18s-.232-5.455-.678-8.083q-.042-.26-.102-.513a11.94 11.94 0 00-1.255-3.273q-.14-.228-.295-.427A11.908 11.908 0 0013.44 3.79q-.199-.155-.427-.295A11.94 11.94 0 0010.14 2.24q-.253-.06-.513-.102C7.045.232 4.345 0 1.6 0 -1.155 0-3.855.232-6.483.678q-.26.042-.513.102A11.94 11.94 0 00-10.27 1.935q-.228.14-.427.295A11.908 11.908 0 00-12.93 4.56q-.155.199-.295.427A11.94 11.94 0 00-14.28 7.86q.06.253.102.513C-14.822 11.045-15 13.745-15 16.5c0 2.755.232 5.455.678 8.083q.042.26.102.513a11.94 11.94 0 001.255 3.273q.14.228.295.427a11.908 11.908 0 002.33 2.33q.199.155.427.295a11.94 11.94 0 003.273 1.255q.253.06.513.102C-4.455 32.768-1.755 33 1 33c2.755 0 5.455-.232 8.083-.678q.26-.042.513-.102a11.94 11.94 0 003.273-1.255q.228-.14.427-.295a11.908 11.908 0 002.33-2.33q.155-.199.295-.427a11.94 11.94 0 001.255-3.273q.06-.253.102-.513C17.768 23.455 18 20.755 18 18z"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-blue-600">Thu/Fri, Dec 28-29</span>
+                    <h2 class="text-2xl font-bold mt-1">Varkala Vibes</h2>
+                    <img src="https://images.unsplash.com/photo-1697193375091-f9bfe3d7ed7b?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2070" alt="Varkala Cliffs" class="w-full h-48 object-cover rounded-lg mt-4 shadow" onerror="this.onerror=null;this.src='https://placehold.co/800x400/3b82f6/ffffff?text=Image+Not+Available';">
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>Dec 28 Morning:</strong> Travel from Munnar to Varkala.
+                            <br><span class="text-sm text-gray-500 ml-4">(Note: This is a long journey. Likely a cab to Aluva/Ernakulam station, then a train to Varkala Sivagiri.)</span>
+                        </li>
+                        <li>Travel details <span class="font-bold text-amber-600">[TBD]</span>.</li>
+                        <li>Check-in and stay in Varkala for the night.</li>
+                        <li><strong>Dec 29:</strong> Full-day Varkala tour.</li>
+                        <li>Explore the Varkala Cliffs, Papanasam Beach, and Janardhana Swamy Temple.</li>
+                        <li><strong>Dec 29 Evening:</strong> Reach Trivandrum.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- DAY 13: Dec 30 -->
+            <div class="relative pl-12 pb-12 timeline-item">
+                <!-- Dot -->
+                <div class="absolute left-0 top-2 w-10 h-10 bg-white rounded-full flex items-center justify-center shadow-md timeline-dot">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                </div>
+                <!-- Card -->
+                <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 timeline-card">
+                    <span class="text-sm font-semibold text-indigo-600">Saturday, Dec 30</span>
+                    <h2 class="text-2xl font-bold mt-1">Homeward Bound</h2>
+                    <ul class="list-disc list-inside mt-3 text-gray-700 space-y-1">
+                        <li><strong>02:40 - 04:35 (Early AM):</strong> Flight from Trivandrum (TRV) to Pune (PNQ).</li>
+                        <li>End of a wonderful trip!</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div> <!-- End Timeline Container -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-8 text-gray-500">
+        <p>Created with ❤️ for an unforgettable trip with घनिष्ट मित्रता</p>
+    </footer>
+
+    <!-- Scroll-Observer JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const timelineCards = document.querySelectorAll('.timeline-card');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Stop observing once it's visible
+                    }
+                });
+            }, {
+                threshold: 0.1 // Trigger when 10% of the element is in view
+            });
+
+            timelineCards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+
+</body>
+</html>
